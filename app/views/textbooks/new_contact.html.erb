@@ -1,0 +1,12 @@
+<h1> Contact to the Seller </h1>
+
+<div>
+    <%= form_tag send_contact_textbook_path(@textbook.id) do %>
+        <h3>Send email for: <%= @textbook.title %> </h3>
+
+        <%= label_tag :message, "Type your message:" %><br>
+        <%= text_area_tag :message %><br>
+
+        <%= submit_tag 'Send message', class: 'button' %>
+    <% end %>
+</div>
